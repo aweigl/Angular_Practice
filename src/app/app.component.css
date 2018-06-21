@@ -1,0 +1,25 @@
+* {
+  color: white;
+}
+
+body {
+  margin: 5px;
+}
+
+.header_container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  background-color: black;
+}
+
+.headerTitle {
+  margin-left: 20px;
+}
+
+.appLink {
+  text-decoration: none;
+  vertical-align: middle;
+  margin: auto 0;
+  font-size: 20px;
+  text-decoration: none;
+}

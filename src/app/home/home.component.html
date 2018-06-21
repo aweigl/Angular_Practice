@@ -1,3 +1,29 @@
-<p>
+<p class="homeBaseMessage">
   I love Hannah!
 </p>
+
+<button class="apiCall" (click)="getPerson()">
+  Click me for Fun!
+</button>
+
+<div *ngIf="info">
+  <h1>
+    {{info.name}}
+  </h1>
+  <li>
+    height: {{info.height}} cm
+  </li>
+  <li>
+    weight: {{info.mass}} kg
+  </li>
+  <li *ngIf="info.skin_color">
+    skin color: {{info.skin_color}}
+  </li>
+  <li>
+    hair color: {{info.hair_color}}
+  </li>
+  <li>
+    gender: {{info.gender}}
+  </li>
+
+</div>

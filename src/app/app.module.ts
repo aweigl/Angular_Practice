@@ -3,6 +3,13 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
+import {
+  Http,
+  Response,
+  RequestOptions,
+  Headers,
+  HttpModule
+} from "@angular/http";
 
 const appRoutes: Routes = [{ path: "homeBase", component: HomeComponent }];
 
@@ -10,7 +17,8 @@ const appRoutes: Routes = [{ path: "homeBase", component: HomeComponent }];
   declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true })
+    HttpModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: false })
   ],
   providers: [],
   bootstrap: [AppComponent]
