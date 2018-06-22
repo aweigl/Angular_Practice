@@ -2,3 +2,16 @@
   font-size: 35px;
   color: red;
 }
+
+.listContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.films span {
+  text-decoration: underline;
+}
+
+.filmTitles {
+  text-decoration: none !important;
+}

@@ -5,25 +5,54 @@
 <button class="apiCall" (click)="getPerson()">
   Click me for Fun!
 </button>
+<div class="listContainer">
+  <div *ngIf="info">
+    <h1>
+      Name: {{info.name}}
+    </h1>
+    <li>
+      Birth Year: {{info.birth_year == "unknown" ? info.birth_year : (info.birth_year + ' (Before Battle of Yavin)')}}
+    </li>
+    <li>
+      Height: {{info.height}} cm
+    </li>
+    <li>
+      Height: {{info.mass}} kg
+    </li>
+    <li>
+      Skin color: {{info.skin_color}}
+    </li>
+    <li>
+      Hair color: {{info.hair_color == "n/a" ? "no hair found!" : info.hair_color}}
+    </li>
+    <li>
+      Gender: {{info.gender == "n/a" ? "no gender found!" : info.gender}}
+    </li>
+    <li class="films" *ngIf="info_films">
+      <span>
+        Films:
+      </span>
+      <ul>
+        <li class="filmTitles" *ngFor="let title of film_title">
+          {{ title }}
+        </li>
+      </ul>
+    </li>
+  </div>
 
-<div *ngIf="info">
-  <h1>
-    {{info.name}}
-  </h1>
-  <li>
-    height: {{info.height}} cm
-  </li>
-  <li>
-    weight: {{info.mass}} kg
-  </li>
-  <li *ngIf="info.skin_color">
-    skin color: {{info.skin_color}}
-  </li>
-  <li>
-    hair color: {{info.hair_color}}
-  </li>
-  <li>
-    gender: {{info.gender}}
-  </li>
-
+  <div *ngIf="planetInfo">
+    <h1>Homeworld: {{planetInfo.name}}</h1>
+    <li>
+      Climate: {{planetInfo.climate}}
+    </li>
+    <li>
+      Diameter: {{planetInfo.diameter}} meter
+    </li>
+    <li>
+      Population: {{planetInfo.population}}
+    </li>
+    <li>
+      Terrain: {{planetInfo.terrain}}
+    </li>
+  </div>
 </div>
